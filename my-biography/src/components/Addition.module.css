@@ -1,0 +1,77 @@
+/* Addition.module.css */
+.container {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  text-align: right;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.infoItem {
+  font-size: 1rem;
+  text-align: left;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  word-break: break-word;  /* جلوگیری از سرریز شدن متن */
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #ff6b6b;
+  text-decoration: underline;
+}
+
+/* تبلت */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 1rem;
+  }
+  
+  .infoItem {
+    font-size: 0.85rem;
+  }
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 0.5rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    padding: 0.3rem;
+  }
+  
+  .title {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .infoItem {
+    font-size: 0.6rem;
+    margin: 0.3rem 0;
+  }
+}
+
+/* موبایل خیلی کوچک */
+@media (max-width: 480px) {
+  .title {
+    font-size: 0.65rem;
+  }
+  
+  .infoItem {
+    font-size: 0.5rem;
+  }
+}

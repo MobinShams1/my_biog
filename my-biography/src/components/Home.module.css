@@ -1,0 +1,76 @@
+/* Home.module.css */
+.container {
+  text-align: center;
+  min-height: 100vh;
+  background-image: linear-gradient(135deg, #e8f4fd 0%, #f3e8ff 100%);
+  padding: 1rem;
+}
+
+.title {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: clamp(0.9rem, 4vw, 1.2rem);
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: clamp(0.8rem, 3.5vw, 1rem);
+  margin-bottom: 1rem;
+}
+
+.image {
+  margin: 2rem auto;
+  width: min(90%, 35rem);
+  height: auto;
+  border-radius: 2rem;
+  display: block;
+  object-fit: cover;
+}
+
+/* ========== ریسپانسیو برای موبایل ========== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .title {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+  
+  .subtitle {
+    font-size: clamp(0.7rem, 3.5vw, 0.9rem);
+  }
+  
+  .description {
+    font-size: clamp(0.6rem, 3vw, 0.8rem);
+  }
+  
+  .image {
+    margin: 1rem auto;
+    border-radius: 1rem;
+    width: min(95%, 25rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+  }
+  
+  .subtitle {
+    font-size: clamp(0.6rem, 3vw, 0.8rem);
+  }
+  
+  .description {
+    font-size: clamp(0.5rem, 2.5vw, 0.7rem);
+  }
+  
+  .image {
+    margin: 0.8rem auto;
+    border-radius: 0.8rem;
+    width: min(98%, 20rem);
+  }
+}

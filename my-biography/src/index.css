@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* ========== ریسپانسیو سراسری ========== */
+/* دسکتاپ (پیش‌فرض) */
+html {
+  font-size: 16px;
+}
+
+/* تبلت */
+@media (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* موبایل خیلی کوچک */
+@media (max-width: 480px) {
+  html {
+    font-size: 10px;
+  }
+}
+

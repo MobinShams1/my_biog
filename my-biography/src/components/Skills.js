@@ -4,7 +4,7 @@ import {
   DiHtml5,
   DiCss3,
   DiDatabase,
-  DiReact
+  DiReact,
 } from "react-icons/di";
 import { SiMicrosoftsqlserver } from "react-icons/si";
 import "./IconAnimations.css";
@@ -40,11 +40,21 @@ function Skills() {
           <DiDatabase className="icon-bounce" style={{ fontSize: "15rem" }} />
         </li>
         <li>
-          <p className={classes.SkillsTitle}>SQL Server</p>
-          <SiMicrosoftsqlserver
-            className="icon-bounce"
-            style={{ fontSize: "15rem" }}
-          />
+          <p
+            style={{
+              fontSize: "30px",
+              fontWeight: "bold",
+              display: "flex",
+              justifyItems: "left",
+            }}
+          >
+            All my skills :
+          </p>
+          <p>
+            {skills.map((skill) => (
+              <p className={classes.SkillsTitle}>{skill}</p>
+            ))}
+          </p>
         </li>
       </ul>
     </div>

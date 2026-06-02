@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/Root.js";
 import RelatePage from "./pages/Relate.js";
 import HomePage from "./pages/Home.js";
-
 function App() {
   const router = createBrowserRouter([
     {
@@ -10,7 +9,9 @@ function App() {
       element: <RootLayout/>,
       children: [
         {index:true , element:<HomePage/>},
-        {path: '/relate' ,element:<RelatePage/>},
+        {path: '/relate' ,element:<RelatePage/>
+          
+        },
       
       ]
     }  

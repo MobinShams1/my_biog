@@ -1,0 +1,19 @@
+.three_column {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.culomn1 {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 2rem;
+}
+
+.column2 {
+  min-height: 100vh;
+
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #0b3b5f, #1b5a6f, #2a8b8b);
+}

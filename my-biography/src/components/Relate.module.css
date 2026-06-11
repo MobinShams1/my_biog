@@ -5,13 +5,12 @@
 
 .culomn1 {
   min-height: 100vh;
-  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  background-color: #0b3b5f;
   border-radius: 2rem;
 }
 
 .column2 {
   min-height: 100vh;
-
   border-radius: 2rem;
   display: flex;
   justify-content: center;

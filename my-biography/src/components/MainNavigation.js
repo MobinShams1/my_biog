@@ -38,7 +38,7 @@ function MainNavigation() {
                 isActive ? classes.avtive : undefined
               }
             >
-              My Biography
+              بیوگرافی من
             </NavLink>} 
             
             

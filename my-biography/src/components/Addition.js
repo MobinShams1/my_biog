@@ -10,9 +10,9 @@ function Addition() {
     <div className={classes.container}>
       <p className={classes.title}>:راه‌های ارتباطی با من </p>
 
-      <p className={classes.infoItem}>ایمیل : {email}</p>
+      <p className={classes.infoItem}>{email}</p>
       <p className={classes.infoItem}>
-        گیت‌هاب : 
+         
         <a 
           href={gitHubName} 
           target="_blank" 
@@ -22,7 +22,7 @@ function Addition() {
           {gitHubName}
         </a>
       </p>
-      <p className={classes.infoItem}>شماره تماس : {phone}</p>
+      <p className={classes.infoItem}>{phone}</p>
     </div>
   );
 }

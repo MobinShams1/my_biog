@@ -1,77 +1,193 @@
-/* Addition.module.css */
 .container {
-  margin-top: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding: 0.5rem;
+  background: linear-gradient(135deg, #fefefe 0%, #f9fafc 100%);
+  border-radius: 28px;
+  padding: 2rem 2.5rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: 0 18px 30px -12px rgba(0, 0, 0, 0.06),
+              0 0 0 1px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  direction: rtl;
+  font-family: system-ui, 'Segoe UI', 'Vazirmatn', 'Tahoma', sans-serif;
+}
+
+.container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 35px -14px rgba(0, 0, 0, 0.1),
+              0 0 0 1px rgba(59, 130, 246, 0.15);
 }
 
 .title {
-  font-size: 1.2rem;
-  text-align: right;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e293b, #2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.3px;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #a855f7);
+  border-radius: 3px;
 }
 
 .infoItem {
-  font-size: 1rem;
-  text-align: left;
-  font-weight: bold;
-  margin: 0.5rem 0;
-  color: rgba(255, 255, 255, 0.9);
-  word-break: break-word;  /* جلوگیری از سرریز شدن متن */
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  font-size: 1.05rem;
+  padding: 0.85rem 0;
+  margin: 0;
+  color: #334155;
+  border-bottom: 1px solid rgba(203, 213, 225, 0.5);
+  font-weight: 450;
 }
 
+.infoItem:last-of-type {
+  border-bottom: none;
+}
+
+/* ایمیل استایل */
+.infoItem:first-of-type {
+  color: #0f172a;
+  font-weight: 500;
+}
+
+/* آیکون‌های متنی برای هر آیتم */
+.infoItem::before {
+  content: '✨';
+  font-size: 1.1rem;
+  opacity: 0.7;
+  margin-left: 8px;
+}
+
+/* آیکون اختصاصی برای هر آیتم */
+.infoItem:nth-child(2)::before {
+  content: '📧';
+}
+
+.infoItem:nth-child(3)::before {
+  content: '🐙';
+}
+
+.infoItem:nth-child(4)::before {
+  content: '📞';
+}
+
+/* لینک گیت‌هاب */
 .link {
-  color: rgba(255, 255, 255, 0.9);
+  color: #2563eb;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  margin-right: 8px;
+  transition: all 0.2s ease;
+  border-bottom: 1px dashed transparent;
+  word-break: break-all;
 }
 
 .link:hover {
-  color: #ff6b6b;
-  text-decoration: underline;
+  color: #1d4ed8;
+  border-bottom-color: #3b82f6;
+  transform: translateX(-2px);
+  display: inline-block;
 }
 
-/* تبلت */
-@media (max-width: 1024px) {
+/* برای موبایل - فقط کوچک‌تر شدن سایزها، بدون تغییر در ساختار */
+@media (max-width: 640px) {
+  .container {
+    padding: 1.2rem 1.5rem;
+  }
+  
   .title {
-    font-size: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .title::after {
+    width: 40px;
+    height: 2.5px;
+    bottom: -6px;
   }
   
   .infoItem {
     font-size: 0.85rem;
+    padding: 0.6rem 0;
+    gap: 0.5rem;
+  }
+  
+  .infoItem::before {
+    font-size: 0.9rem;
+  }
+  
+  .link {
+    font-size: 0.85rem;
   }
 }
 
-/* موبایل */
-@media (max-width: 768px) {
+/* انیمیشن ملایم هنگام لود شدن */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeSlideUp 0.4s ease-out;
+}
+
+/* ریسپانسیو برای RTL */
+.infoItem {
+  justify-content: flex-start;
+}
+
+/* برای کپی کردن ایمیل یا شماره */
+.infoItem {
+  user-select: text;
+}
+
+/* پشتیبانی از دارک مود */
+@media (prefers-color-scheme: dark) {
   .container {
-    margin-top: 0.5rem;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
-    padding: 0.3rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    box-shadow: 0 18px 30px -12px rgba(0, 0, 0, 0.3);
   }
   
   .title {
-    font-size: 0.75rem;
-    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #94a3b8, #60a5fa);
+    background-clip: text;
+    -webkit-background-clip: text;
   }
   
   .infoItem {
-    font-size: 0.6rem;
-    margin: 0.3rem 0;
-  }
-}
-
-/* موبایل خیلی کوچک */
-@media (max-width: 480px) {
-  .title {
-    font-size: 0.65rem;
+    color: #cbd5e1;
+    border-bottom-color: rgba(51, 65, 85, 0.6);
   }
   
-  .infoItem {
-    font-size: 0.5rem;
+  .infoItem:first-of-type {
+    color: #f1f5f9;
+  }
+  
+  .link {
+    color: #60a5fa;
+  }
+  
+  .link:hover {
+    color: #93c5fd;
   }
 }

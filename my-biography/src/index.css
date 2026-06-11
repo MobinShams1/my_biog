@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1a3978;
 }
 
 code {
@@ -12,27 +13,23 @@ code {
     monospace;
 }
 
-/* ========== ریسپانسیو سراسری ========== */
-/* دسکتاپ (پیش‌فرض) */
+
 html {
   font-size: 16px;
 }
 
-/* تبلت */
 @media (max-width: 1024px) {
   html {
     font-size: 14px;
   }
 }
 
-/* موبایل */
 @media (max-width: 768px) {
   html {
     font-size: 12px;
   }
 }
 
-/* موبایل خیلی کوچک */
 @media (max-width: 480px) {
   html {
     font-size: 10px;
